@@ -1,0 +1,54 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.markdown-content {
+  line-height: 1.8;
+}
+
+.markdown-content p,
+.markdown-content ul,
+.markdown-content ol,
+.markdown-content blockquote {
+  margin-bottom: 1rem;
+}
+
+/* Force LTR for inline and display math */
+.katex,
+.katex-display {
+  direction: ltr !important;
+  text-align: center;
+}
+
+.katex * {
+  direction: ltr !important;
+}
+
+/* Ensure inline math stays inline in RTL context */
+.markdown-content .katex {
+  display: inline-block;
+  text-align: left;
+}
+
+/* Center display math */
+.markdown-content .katex-display {
+  text-align: center;
+  margin: 1em 0;
+}
